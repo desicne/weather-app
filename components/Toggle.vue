@@ -19,6 +19,7 @@ export default {
     },
     mounted() {
       this.selectedFh = (localStorage.getItem('showFh') === 'true') ? true : false
+      this.$emit('fhValue', this.selectedFh)
     },
     watch: {
         selectedFh: function(val) {
